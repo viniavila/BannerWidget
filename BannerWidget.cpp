@@ -53,10 +53,14 @@ public:
 
     QStaticText static_text() {
         QStaticText m(message);
+        QTextOption opt = m.textOption();
+        opt.setWrapMode(QTextOption::NoWrap);
+        m.setTextOption(opt);
+        m.setTextFormat(Qt::PlainText);
         float aw = q_ptr->width() - 1.7*height;
         if (m.size().width() > aw) {
             QString em = q_ptr->fontMetrics().elidedText(message, Qt::ElideRight, aw);
-            m = QStaticText(em);
+            m.setText(em);
         }
         float x = 0.3*height;
         float y = 0.5*(height - m.size().height());
@@ -104,7 +108,7 @@ BannerWidget::BannerWidget(Color color, const QString& message, bool animated, i
     d_ptr->message = message;
     d_ptr->isAnimated = animated;
     d_ptr->timeout = timeout;
-    d_ptr->height = 2.5*f.tightBoundingRect(message).height();
+    d_ptr->height = 2*f.boundingRect(message).height();
     parent->installEventFilter(this);
     setAutoFillBackground(false);
     setAttribute(Qt::WA_DeleteOnClose, true);

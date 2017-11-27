@@ -25,7 +25,7 @@ BannerWidget::critical(message, animated, timeout, parent);
 
 These static functions returns a `BannerWidget` pointer so one can optionally connect its slot `close()` to another widget signal or make the banner disapear based in events occurring in the parent widget routine. Internally `Qt::WA_DeleteOnClose` BannerWidget attribute was set `true`, so deleting the pointer is not necessary.
 
-Rich Text is NOT supported because there is no easy way to elide a string with HTML tags. When Qt add support to this in an easier way, I will add it too. Indeed all messages are formatted in +bold+
+Rich Text is NOT supported because there is no easy way to elide a string with HTML tags. When Qt add support to this in an easier way, I will add it too. Indeed all messages are formatted in **bold**
  
 ### Licensing
 

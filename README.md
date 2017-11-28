@@ -1,4 +1,4 @@
-### Welcome to my BannerWidget module
+## Welcome to my BannerWidget module
 
 This class is intended to create fancy and discrete notifications to show to the users information, warning and critical messages directly your program's Qt UI. This class was inspired by GtkInfoBar Gtk3 widget, as there is no equivalent of this widget in Qt. Although inspired by GtKInfoBar, BannerWidget is simpler and limited. Its main objective is just show messages, on the other hand, GtkInfoBar permits add actions like a real message box replacement.
  

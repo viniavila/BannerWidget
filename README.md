@@ -29,6 +29,8 @@ These static functions returns a `BannerWidget` pointer so one can optionally co
 
 Rich Text is NOT supported because there is no easy way to elide a string with HTML tags. When Qt add support to this in an easier way, I will add it too. Indeed all messages are formatted in **bold**
  
+You can add just one BannerWidget per parent QWidget. If you try to create another BannerWidget associated with one parent widget, the program will close the previous BannerWidget before creating the new one.
+
 ### Licensing
 
 My code is licensed in LGPL v3 so you can use it either in open source or closed source applications since it concerns with the terms of this license. If you are using my code into your project and finds it useful, do not forget to mention my name in the credits, and if it is worthy, donation can be accepted.
